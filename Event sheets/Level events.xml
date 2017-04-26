@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>Level events</name>
     <events>
         <variable constant="1" name="NEUTRAL" sid="680457671328977" static="0" type="number">-1</variable>
         <variable constant="1" name="DIR_RIGHT" sid="576719279137022" static="0" type="number">0</variable>
@@ -301,6 +301,9 @@
                         <condition id="1" name="Is overlapping another object" sid="659315199722747" type="Bomberman">
                             <param id="0" name="Object">eBlock</param>
                         </condition>
+                        <condition id="1" name="Is overlapping another object" sid="108096167954367" type="Bomberman">
+                            <param id="0" name="Object">nEBlock</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="382451298536039" type="Bomberman">
@@ -362,10 +365,13 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="385066124421365">
+                                <event-block any="1" sid="385066124421365">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="170234187407222" type="Explosion">
                                             <param id="0" name="Object">Block</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="691108473759171" type="Explosion">
+                                            <param id="0" name="Object">nEBlock</param>
                                         </condition>
                                     </conditions>
                                     <actions>
