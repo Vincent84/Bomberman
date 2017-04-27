@@ -716,6 +716,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="RemainingTime" sid="799691935231129">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Remaining" sid="974317412661829" type="number" />
+            </instance-variables>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

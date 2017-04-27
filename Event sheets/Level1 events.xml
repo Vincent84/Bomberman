@@ -31,6 +31,9 @@
                     <param id="0" name="Instance variable">BombRange</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Set text" sid="384922809562260" type="RemainingTime">
+                    <param id="0" name="Text">&quot;Time: &quot;&amp;RemainingTime.Remaining</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="741397206081911">
@@ -92,6 +95,27 @@
                 <action id="-11" name="Add to" sid="233993961766656" type="Bomb">
                     <param id="0" name="Instance variable">Counter</param>
                     <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="741864688876254">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="988392451286060" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="412537724294262" type="RemainingTime">
+                    <param id="0" name="Instance variable">Remaining</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="284587835954490" type="RemainingTime">
+                    <param id="0" name="Instance variable">Remaining</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="593110397107052" type="RemainingTime">
+                    <param id="0" name="Text">&quot;Time: &quot;&amp;RemainingTime.Remaining</param>
                 </action>
             </actions>
         </event-block>
@@ -1176,12 +1200,17 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="340535934467674">
+        <event-block any="1" sid="340535934467674">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="247636752921734" type="System">
                     <param id="0" name="First value">Bomberman.Count</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="903949270511948" type="RemainingTime">
+                    <param id="0" name="Instance variable">Remaining</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
