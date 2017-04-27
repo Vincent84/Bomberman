@@ -31,8 +31,15 @@
                     <param id="0" name="Instance variable">BombRange</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="0" name="Set text" sid="384922809562260" type="RemainingTime">
-                    <param id="0" name="Text">&quot;Time: &quot;&amp;RemainingTime.Remaining</param>
+                <action id="0" name="Set text" sid="316091011724456" type="RemainingTime">
+                    <param id="0" name="Text">RemainingTime.Remaining</param>
+                </action>
+                <action id="37" name="Unload all audio" sid="578970430099477" type="Audio" />
+                <action id="0" name="Play" sid="736000393601117" type="Audio">
+                    <param id="0" name="Audio file">Theme</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -103,19 +110,14 @@
                 <condition id="-6" name="Every X seconds" sid="988392451286060" type="System">
                     <param id="0" name="Interval (seconds)">1.0</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="412537724294262" type="RemainingTime">
-                    <param id="0" name="Instance variable">Remaining</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="284587835954490" type="RemainingTime">
+                <action id="-12" name="Subtract from" sid="399383632252474" type="RemainingTime">
                     <param id="0" name="Instance variable">Remaining</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="0" name="Set text" sid="593110397107052" type="RemainingTime">
-                    <param id="0" name="Text">&quot;Time: &quot;&amp;RemainingTime.Remaining</param>
+                <action id="0" name="Set text" sid="770275557719416" type="RemainingTime">
+                    <param id="0" name="Text">RemainingTime.Remaining</param>
                 </action>
             </actions>
         </event-block>
@@ -1207,11 +1209,6 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="903949270511948" type="RemainingTime">
-                    <param id="0" name="Instance variable">Remaining</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="583068130512782" type="System">
@@ -1220,6 +1217,9 @@
                 </action>
                 <action id="-2" name="Go to layout" sid="937721367261286" type="System">
                     <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="35" name="Unload audio" sid="388260532955488" type="Audio">
+                    <param id="0" name="Audio file">Theme</param>
                 </action>
             </actions>
         </event-block>
@@ -1237,6 +1237,9 @@
                 </action>
                 <action id="-2" name="Go to layout" sid="639934878163651" type="System">
                     <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="35" name="Unload audio" sid="439424526050604" type="Audio">
+                    <param id="0" name="Audio file">Theme</param>
                 </action>
             </actions>
         </event-block>

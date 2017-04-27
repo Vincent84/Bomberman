@@ -25,6 +25,12 @@
                     <param id="0" name="X">1</param>
                     <param id="1" name="Value">&quot;Two&quot;</param>
                 </action>
+                <action id="0" name="Play" sid="166201274185391" type="Audio">
+                    <param id="0" name="Audio file">Menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="907708870170987">
@@ -58,6 +64,15 @@
                         <action id="0" name="Set text" sid="830771054107191" type="Description">
                             <param id="0" name="Text">&quot;Player&quot;&amp;Array.At(Winners)&amp;&quot; wins!&quot;</param>
                         </action>
+                        <action id="35" name="Unload audio" sid="785375865865231" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                        </action>
+                        <action id="0" name="Play" sid="728330236584731" type="Audio">
+                            <param id="0" name="Audio file">Win</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="115583940522818">
@@ -71,6 +86,15 @@
                     <actions>
                         <action id="0" name="Set text" sid="749101246307999" type="Description">
                             <param id="0" name="Text">&quot;Game Over&quot;</param>
+                        </action>
+                        <action id="35" name="Unload audio" sid="936522202930758" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                        </action>
+                        <action id="0" name="Play" sid="386748845772906" type="Audio">
+                            <param id="0" name="Audio file">Game Over</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -109,6 +133,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="35" name="Unload audio" sid="161086244141734" type="Audio">
+                    <param id="0" name="Audio file">Menu</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="425882702694475" type="System">
                     <param id="0" name="Layout">Level1</param>
                 </action>

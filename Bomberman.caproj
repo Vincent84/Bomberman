@@ -11,6 +11,7 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -716,10 +717,16 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="RemainingTime" sid="799691935231129">
+        <object-type name="TimeLabel" sid="799691935231129">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="378247385263029">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="RemainingTime" sid="592812667753541">
             <plugin id="Text" />
             <instance-variables>
-                <instance-variable name="Remaining" sid="974317412661829" type="number" />
+                <instance-variable name="Remaining" sid="689477927941766" type="number" />
             </instance-variables>
         </object-type>
     </object-folder>
@@ -736,9 +743,32 @@
         <global-instance type="Keyboard" uid="38" />
         <global-instance type="Function" uid="40" />
         <global-instance type="Mouse" uid="99" />
+        <global-instance type="Audio" uid="102">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="Menu.m4a" />
+        <file name="Menu.ogg" />
+        <file name="Theme.m4a" />
+        <file name="Theme.ogg" />
+        <file name="Game Over.m4a" />
+        <file name="Game Over.ogg" />
+        <file name="Win.m4a" />
+        <file name="Win.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
