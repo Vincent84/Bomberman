@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Level</layout>
-        <event-sheet order="1">Level events</event-sheet>
+        <layout order="0">Level1</layout>
+        <layout active="1" order="2">Menu</layout>
+        <event-sheet order="1">Level1 events</event-sheet>
+        <event-sheet order="3">Menu events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -36,6 +38,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Explosion/" />
         <folder expanded="1" path="animation-folder/Powerup/" />
         <folder expanded="1" path="animation-folder/nEBlock/" />
+        <folder expanded="1" path="animation-folder/Destination/" />
+        <folder expanded="1" path="animation-folder/Title/" />
+        <folder expanded="1" path="animation-folder/PlayerNumber/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Portal/" />
     </folders-expanded>
 </c2uistate>

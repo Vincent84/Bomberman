@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu events</name>
+    <events>
+        <variable constant="0" name="Winners" sid="436966713598536" static="0" type="number">-1</variable>
+        <event-block sid="527528130698611">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="270990362229578" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="273392291092283" type="Description">
+                    <param id="0" name="Family name">&quot;Anton&quot;</param>
+                    <param id="1" name="CSS URL">&quot;http://fonts.googleapis.com/css?family=Anton&quot;</param>
+                </action>
+                <action id="2" name="Set font face" sid="884791146818889" type="Description">
+                    <param id="0" name="Font face">&quot;Anton&quot;</param>
+                    <param id="1" name="Style">0</param>
+                </action>
+                <action id="2" name="Set at X" sid="374491826029278" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;One&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="113927772824754" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">&quot;Two&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="907708870170987">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="972790291852703" type="System">
+                            <param id="0" name="Variable">Winners</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="362817332481571" type="Description">
+                            <param id="0" name="Text">&quot;Choose the number of the players&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="607639967170244">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="174439092498255" type="System">
+                            <param id="0" name="Variable">Winners</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="440815988238735" type="System">
+                            <param id="0" name="Variable">Winners</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="830771054107191" type="Description">
+                            <param id="0" name="Text">&quot;Player&quot;&amp;Array.At(Winners)&amp;&quot; wins!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115583940522818">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="742042591225067" type="System">
+                            <param id="0" name="Variable">Winners</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="749101246307999" type="Description">
+                            <param id="0" name="Text">&quot;Game Over&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="650991861012583">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="141595395446917" type="Mouse">
+                    <param id="0" name="Object">PlayerNumber</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="485377814601459" type="PlayerNumber">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="862053313672554">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="831250899687847" type="Mouse">
+                    <param id="0" name="Object">PlayerNumber</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="316146615124368" type="PlayerNumber">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="692745600712410">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="463099916105284" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PlayerNumber</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="425882702694475" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+                <action id="-9" name="Set value" sid="735887647061267" type="System">
+                    <param id="0" name="Variable">Players</param>
+                    <param id="1" name="Value">PlayerNumber.PlayerNumber</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
